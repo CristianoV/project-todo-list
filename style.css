@@ -1,8 +1,18 @@
-#teste{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+#teste {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-section{
-    padding-top: 30px;
+
+section {
+  padding-top: 30px;
+}
+
+#criar-tarefa {
+  padding: 13px;
+}
+#criacao{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
