@@ -16,3 +16,6 @@ section {
   justify-content: center;
   gap: 5px;
 }
+.selecionado{
+  background-color: gray;
+}
