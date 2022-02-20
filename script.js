@@ -16,17 +16,32 @@ function letras(event) {
 
 caminhoBotao.addEventListener("click", letras)
 
+let tentando = document.getElementsByClassName('selecionado')
 
 let test;
 
 
+function apagando() {
+  for (let index = 0; index < tentando.length; index++) {
+    tentando[index].className = ''
+  }
+}
+
 function selecionar(event) {
   test = event.target;
-  if (test.className === 'selecionado') {
-    test.className = ''
-  }else{
-    test.className = 'selecionado'
+
+  if (test.className === '') {
+    apagando();
+    test.className = 'selecionado';
+
   }
-  }
+  // else if (test.className === '' || tentando[0].className === 'selecionado') {
+  //   tentando[0].className = ''
+  //   test.className = 'selecionado';
+  // }
+  // else{
+  //   test.className = ''
+  // }
+}
 
 caminhoLi.addEventListener('click', selecionar)
