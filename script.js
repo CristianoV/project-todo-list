@@ -43,5 +43,16 @@ function selecionar(event) {
   //   test.className = ''
   // }
 }
+let riscado;
+function completar(event) {
+  riscado = event.target
+  if (riscado.className === 'selecionado') {
+    riscado.className = 'completed'
+  }else{
+    riscado.className = ''
+  }
+}
 
+
+caminhoLi.addEventListener('dblclick', completar)
 caminhoLi.addEventListener('click', selecionar)
