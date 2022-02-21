@@ -4,6 +4,7 @@ let listaTarefas = [];
 const caminhoLi = document.querySelector('#lista-tarefas')
 const todasAsLis = document.getElementsByTagName('li')
 const caminhoBotaoLimpar = document.getElementById('apaga-tudo')
+const caminhoBotaoLimparFinalizados = document.getElementById('remover-finalizados')
 
 function letras(event) {
   listaTarefas.push(caminhoInput.value)
@@ -50,15 +51,21 @@ function completar(event) {
   }
 }
 
-function limpaTudo(event) {
+function limpaTudo() {
   for (let index = 0; index = todasAsLis.length; index++) {
     caminhoLi.removeChild(todasAsLis[0])
   }
 }
 
+function limpaFinalizados() {
+  let finalizados = document.getElementsByClassName('completed')
+  for (let index = 0; index = finalizados.length; index++) {
+    caminhoLi.removeChild(finalizados[0])
+  }
+}
 
 
 caminhoLi.addEventListener('dblclick', completar)
 caminhoLi.addEventListener('click', selecionar)
-
+caminhoBotaoLimparFinalizados.addEventListener('click', limpaFinalizados)
 caminhoBotaoLimpar.addEventListener('click', limpaTudo)

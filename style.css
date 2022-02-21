@@ -22,3 +22,11 @@ section {
 .completed{
   text-decoration: line-through;
 }
+/* #lista-tarefas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+  padding: auto;
+  margin: 20px 300px ;
+} */
