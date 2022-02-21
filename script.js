@@ -1,8 +1,9 @@
 const caminhoBotao = document.querySelector('#criar-tarefa')
-let caminhoInput = document.querySelector('#texto-tarefa')
+const caminhoInput = document.querySelector('#texto-tarefa')
 let listaTarefas = [];
-let caminhoLi = document.querySelector('#lista-tarefas')
-let todasAsLis = document.getElementsByTagName('li')
+const caminhoLi = document.querySelector('#lista-tarefas')
+const todasAsLis = document.getElementsByTagName('li')
+const caminhoBotaoLimpar = document.getElementById('apaga-tudo')
 
 function letras(event) {
   listaTarefas.push(caminhoInput.value)
@@ -35,10 +36,6 @@ function selecionar(event) {
     test.className = 'selecionado';
 
   }
-  // else if (test.className === '' || tentando[0].className === 'selecionado') {
-  //   tentando[0].className = ''
-  //   test.className = 'selecionado';
-  // }
   // else{
   //   test.className = ''
   // }
@@ -53,6 +50,15 @@ function completar(event) {
   }
 }
 
+function limpaTudo(event) {
+  for (let index = 0; index = todasAsLis.length; index++) {
+    caminhoLi.removeChild(todasAsLis[0])
+  }
+}
+
+
 
 caminhoLi.addEventListener('dblclick', completar)
 caminhoLi.addEventListener('click', selecionar)
+
+caminhoBotaoLimpar.addEventListener('click', limpaTudo)
